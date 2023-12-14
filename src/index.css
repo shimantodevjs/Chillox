@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+
+  button {
+      @apply border-black bg-red-600 text-white px-3 py-2 rounded-[10px] 
+               max-sm:text-[12px]
+               outline-none border-none
+  }
+
+  body {
+      font-family: 'Poppins', sans-serif;
+  }
+
+}
