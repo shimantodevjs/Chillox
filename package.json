@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/luckiest-guy": "^5.0.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "typeface-archivo-black": "^1.1.13"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

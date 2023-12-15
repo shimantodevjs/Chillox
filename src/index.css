@@ -1,19 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 @layer base {
 
   button {
-      @apply border-black bg-red-600 text-white px-3 py-2 rounded-[10px] 
+      @apply border-black bg-brand text-white px-3 py-2 rounded-[10px] 
                max-sm:text-[12px]
                outline-none border-none
   }
 
-  body {
-      font-family: 'Poppins', sans-serif;
+  .nav-link {
+      @apply rounded-lg cursor-pointer hover:bg-red-300 px-5 py-2;
   }
 
+  .news-card{
+    @apply h-[300px] w-[250px]
+  }
+
+  .news-img{
+    @apply cursor-pointer transition-all duration-150 hover:scale-105;
+  }
+
+
+  body {
+      font-family: 'Oswald', cursive;
+  }
 }
