@@ -24,7 +24,7 @@ const Navbar = ({onMenuToggle}) => {
   };
 
   return (
-    <div className='mx-auto h-[80px] lg:h-[100px] max-w-full flex items-center justify-between p-4'>
+    <div className='mx-auto h-[80px] lg:h-[100px] max-w-full flex items-center justify-between p-4 '>
 
       {/* left */}
       <div className='flex items-center gap-4 max-sm:gap-2'>

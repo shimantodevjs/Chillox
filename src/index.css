@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,20 +16,113 @@
                outline-none border-none
   }
 
-  .nav-link {
-      @apply rounded-lg cursor-pointer hover:bg-red-300 px-5 py-2;
-  }
-
-  .news-card{
-    @apply h-[300px] w-[250px]
-  }
-
-  .news-img{
-    @apply cursor-pointer transition-all duration-150 hover:scale-105;
+  .section-header{
+    @apply text-7xl max-lg:text-5xl text-center mt-[3rem] max-lg:mt-[2rem] mb-[5rem] max-lg:mb-[2rem] text-outline
   }
 
 
   body {
       font-family: 'Oswald', cursive;
+      background-color: #e7e7e5;
   }
+
+}
+
+@layer components{
+
+  .nav-link {
+      @apply rounded-lg cursor-pointer hover:bg-red-300 px-5 py-2;
+    }
+  
+    .news-card {
+      @apply h-[300px] w-[250px] max-sm:flex max-sm:gap-2 max-sm:items-center max-sm:w-full max-sm:h-auto
+    }
+  
+    .news-img {
+      @apply cursor-pointer transition-all duration-150 hover:scale-105;
+    }
+  
+    .specialOffer-img {
+      @apply h-[450px] w-[400px] max-lg:h-[350px] sm:opacity-90 hover:opacity-100 slide-img hover:ml-0
+    }
+  
+    .specialOffer-container {
+      @apply flex flex-col justify-start gap-2 custom-box cursor-pointer bg-white
+    }
+
+}
+
+
+@layer utilities {
+
+      @keyframes glowing {
+          0% {
+            box-shadow: 0 0 5px #ea2723, 0 0 10px #ea2723, 0 0 15px #ea2723;
+          }
+      
+          50% {
+            box-shadow: 0 0 20px #ea2723, 0 0 30px #ea2723, 0 0 40px #ea2723;
+          }
+      
+          100% {
+            box-shadow: 0 0 5px #ea2723, 0 0 10px #ea2723, 0 0 15px #ea2723;
+          }
+        }
+      
+        .glow-border {
+          animation: glowing 2s infinite;
+        }
+      
+        @keyframes glow {
+          0% {
+            text-shadow: 0 0 5px #ea2723, 0 0 10px #ea2723, 0 0 15px #ea2723;
+          }
+      
+          50% {
+            text-shadow: 0 0 20px #ea2723, 0 0 30px #ea2723, 0 0 40px #ea2723;
+          }
+      
+          100% {
+            text-shadow: 0 0 5px #ea2723, 0 0 10px #ea2723, 0 0 15px #ea2723;
+          }
+        }
+      
+        @keyframes suckInOut {
+      
+          0%,
+          100% {
+            transform: scale(1);
+          }
+      
+          50% {
+            transform: scale(0.9);
+          }
+        }
+      
+        .text-outline {
+          color: rgb(238, 235, 232);
+          -webkit-text-stroke: 4px #ea2723;
+          font-family: 'Luckiest Guy', cursive;
+          animation: glow 3s infinite, suckInOut 3s infinite;
+        }
+      
+        .box-shadow {
+          text-shadow: 2px 2px 4px black;
+        }
+      
+        .slide-img {
+          margin-left: 30px;
+          -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+          -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+        }
+  
+  .text-line-through {
+    text-decoration: line-through;
+  }
+
+    .custom-box {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
 }

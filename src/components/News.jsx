@@ -5,9 +5,12 @@
         <div className='flex max-lg:flex-col gap-7 max-lg:gap-0'>
          {/* left */}
 
-          <div className='w-[50%] max-lg:w-[100%]  border-r-[1px] border-gray-300 mt-5 mb-5 px-10 '>
+          <div className='w-[50%] max-lg:w-[100%]  border-r-[1px] border-gray-400 mt-5 mb-5 px-10 '>
             <div className='py-5'>
             <img src="/hero6.jpg" alt="" className='news-img' />
+            <div className='mt-5 '>
+            <a href="tel:+09678361361" className='underline'>Call Now: 09678361361</a>
+            </div>
             </div>
 
             <div>
@@ -22,30 +25,38 @@
 
           <div className='p-5 mb-5 flex justify-center  items-center'>
             
-            <div className='grid grid-cols-2 max-sm:grid-cols-1 gap-[60px] max-sm:gap-[40px] '>
+            <div className='grid grid-cols-2 max-sm:grid-cols-1 gap-[60px] max-sm:gap-5 '>
 
             <div className='news-card '>
-            <img src="/hero2.png" alt="" className='cursor-pointer' />
+            <img src="/hero2.png" alt="" className='cursor-pointer max-sm:h-[100px] max-sm:w-[100px]' />
+            <div>
             <h1 className='text-brand mt-2'>Happiness!</h1>
             <h1>Get 15% Discount! More ADDA with friends</h1>
             </div>
+            </div>
 
             <div className='news-card'>
-            <img src="/hero3.png" alt="" className='cursor-pointer' />
+            <img src="/hero3.png" alt="" className='cursor-pointer max-sm:h-[100px] max-sm:w-[100px] ' />
+            <div>
             <h1 className='text-brand mt-2'>I-MISS-U</h1>
             <h1>Special desserts with loved ones</h1>
             </div>
-
-            <div className='news-card'>
-            <img src="/hero4.png" alt="" className='cursor-pointer'/>
-            <h1 className='text-brand mt-2'>Beef or Chicken</h1>
-            <h1>Which one you prefer? Tell us</h1>
             </div>
 
             <div className='news-card'>
-            <img src="/hero5.jpg" alt="" className='cursor-pointer'/>
+            <img src="/hero4.png" alt="" className='cursor-pointer max-sm:h-[100px] max-sm:w-[100px]'/>
+            <div>
+            <h1 className='text-brand mt-2'>Beef or Chicken</h1>
+            <h1>Which one you prefer? Tell us</h1>
+            </div>
+            </div>
+
+            <div className='news-card'>
+            <img src="/hero5.jpg" alt="" className='cursor-pointer max-sm:h-[100px] max-sm:w-[100px] '/>
+            <div>
             <h1 className='text-brand mt-2'>Meme contest!</h1>
             <h1>Its your Chance, be the WINNER</h1>
+            </div>
             </div>
 
             </div>

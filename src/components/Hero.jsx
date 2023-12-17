@@ -26,7 +26,7 @@ const Hero = ({offset}) => {
     <div style={{marginTop:offset}}>
       <div className='bg-brand text-white flex max-lg:flex-col justify-between items-center'>
             {/* right */}
-            <div className='py-[5rem] px-[2rem]'>
+            <div className='pt-[3rem] pb-[3rem] max-lg:pt-[2rem] max-sm:pb-[5rem] px-[2rem]'>
                 <div className='border-l-[2px] border-solid px-[1rem] flex flex-col justify-start items-start gap-10'>
                 <div className='flex justify-start items-center'>
                   <img src="/chillox.jpg" alt="" className='h-20 w-20' />
