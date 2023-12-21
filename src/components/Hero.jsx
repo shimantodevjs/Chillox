@@ -23,7 +23,7 @@ const Hero = ({offset}) => {
     }
   }
   return (
-    <div style={{marginTop:offset}}>
+    <div className='bg-[#e7e7e5]' style={{marginTop:offset}}>
       <div className='bg-brand text-white flex max-lg:flex-col justify-between items-center'>
             {/* right */}
             <div className='pt-[3rem] pb-[3rem] max-lg:pt-[2rem] max-sm:pb-[5rem] px-[2rem]'>
@@ -50,9 +50,9 @@ const Hero = ({offset}) => {
                          value={inputValue}
                          onChange={(e) => setInputValue(e.target.value)} 
                          className='text-3xl text-white outline-none p-2 rounded-l-[10px] border-l-[1px] border-t-[1px] border-b-[1px]
-                       bg-brand placeholder:text-white ' />
+                       bg-brand placeholder:text-white  ' />
                        
-                    <div onClick={handleMessage} className='bg-brand cursor-pointer  text-3xl p-[15.5px] rounded-r-[10px] border-r-[1px] border-t-[1px] border-b-[1px]'> <FaArrowRight /> </div>
+                    <div onClick={handleMessage} className='bg-brand cursor-pointer  text-3xl p-4 rounded-r-[10px] border-r-[1px] border-t-[1px] border-b-[1px]'> <FaArrowRight /> </div>
                     
                 </div>
 

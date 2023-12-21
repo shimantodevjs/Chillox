@@ -17,13 +17,12 @@
   }
 
   .section-header{
-    @apply text-7xl max-lg:text-5xl text-center mt-[3rem] max-lg:mt-[2rem] mb-[5rem] max-lg:mb-[2rem] text-outline
+    @apply text-7xl max-lg:text-5xl text-center pt-[3rem] max-lg:mt-[2rem] mb-[5rem] max-lg:mb-[2rem] text-outline
   }
 
 
   body {
-      font-family: 'Oswald', cursive;
-      background-color: #e7e7e5;
+      font-family: 'Oswald', sans-serif;
   }
 
 }

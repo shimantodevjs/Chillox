@@ -2,7 +2,7 @@ import React from 'react'
 
 const SpecialOffer = () => {
   return (
-    <div className='mb-10 '>
+    <div className='mb-10 bg-[#e7e7e5] pb-[2rem]'>
       <h1 className='section-header'
        >Special Offer</h1>
 
