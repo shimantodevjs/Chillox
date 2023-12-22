@@ -49,7 +49,7 @@ const Hero = ({offset}) => {
                          placeholder='Enter email address'
                          value={inputValue}
                          onChange={(e) => setInputValue(e.target.value)} 
-                         className='text-3xl text-white outline-none p-2 rounded-l-[10px] border-l-[1px] border-t-[1px] border-b-[1px]
+                         className='text-3xl text-white outline-none p-2to rounded-l-[10px] border-l-[1px] border-t-[1px] border-b-[1px]
                        bg-brand placeholder:text-white  ' />
                        
                     <div onClick={handleMessage} className='bg-brand cursor-pointer  text-3xl p-4 rounded-r-[10px] border-r-[1px] border-t-[1px] border-b-[1px]'> <FaArrowRight /> </div>
