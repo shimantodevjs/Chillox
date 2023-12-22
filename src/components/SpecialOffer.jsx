@@ -16,11 +16,11 @@ const SpecialOffer = () => {
 
             <div>
 
-            <div className='text-2xl max-lg:text-xl text-brand px-5 pt-2'>Steak Burger</div>
+            <div className='text-2xl max-lg:text-xl text-brand px-5 pt-2'>Signature Burger</div>
 
             <div className='flex gap-5 text-xl max-lg:text-sm items-center px-5 pb-5 mt-4'>
-            <div className='text-line-through'>799৳</div>
-            <div>699৳</div>
+            <div className='text-line-through'>499৳</div>
+            <div>450৳</div>
             </div>
 
             </div>
@@ -35,11 +35,11 @@ const SpecialOffer = () => {
 
             <div>
 
-            <div className='text-2xl max-lg:text-xl text-brand px-5 pt-2'>Bacon & Beef Burger</div>
+            <div className='text-2xl max-lg:text-xl text-brand px-5 pt-2'>Beef Bacon Burger</div>
 
             <div className='flex gap-5 text-xl max-lg:text-sm items-center px-5 pb-5 mt-4'>
-            <div className='text-line-through'>699৳</div>
-            <div>499৳</div>
+            <div className='text-line-through'>319৳</div>
+            <div>270৳</div>
             </div>
 
             </div>
@@ -57,8 +57,8 @@ const SpecialOffer = () => {
             <div className='text-2xl max-lg:text-xl text-brand px-5 pt-2'>Special Combo</div>
 
             <div className='flex gap-5 text-xl max-lg:text-sm items-center px-5 pb-5 mt-4'>
-            <div className='text-line-through'>1599৳</div>
-            <div>1199৳</div>
+            <div className='text-line-through'>799৳</div>
+            <div>699৳</div>
             </div>
 
             </div>

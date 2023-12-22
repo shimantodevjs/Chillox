@@ -10,7 +10,7 @@ const App=()=> {
 
   const handleMenuToggle= (isOpen)=>{
     setMenuOpen(isOpen)
-    setHeroOffset(isOpen ? 250: 0)
+    setHeroOffset(isOpen ? 200: 0)
   }
   return (
     <>

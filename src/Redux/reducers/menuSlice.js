@@ -1,8 +1,7 @@
-// src/reducers/menuSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchBurgers = createAsyncThunk('menu/fetchBurgers', async () => {
-  const response = await fetch('https://my-burger-api.herokuapp.com/burgers');
+  const response = await fetch('https://shimantodevjs.github.io/fastfood-api/fastfood.json');
   const data = await response.json();
   return data;
 });
@@ -13,8 +12,14 @@ const menuSlice = createSlice({
     burgers: [],
     status: 'idle',
     error: null,
+    burgerTypeFilter: null,
   },
-  reducers: {},
+  reducers: {
+     // Added reducer for setting burger type filter
+    setBurgerTypeFilter: (state, action) => {
+      state.burgerTypeFilter = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchBurgers.pending, (state) => {
@@ -22,7 +27,13 @@ const menuSlice = createSlice({
       })
       .addCase(fetchBurgers.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.burgers = action.payload;
+        // Check if action.payload has burgers property
+        if (Array.isArray(action.payload.burgers)) {
+          state.burgers = action.payload.burgers;
+        } else {
+          state.status = 'failed';
+          state.error = 'Invalid burger data: Burgers array not found';
+        }
       })
       .addCase(fetchBurgers.rejected, (state, action) => {
         state.status = 'failed';
@@ -31,4 +42,8 @@ const menuSlice = createSlice({
   },
 });
 
+
+export const { setBurgerTypeFilter } = menuSlice.actions;
+
 export default menuSlice.reducer;
+

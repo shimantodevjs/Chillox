@@ -1,34 +1,94 @@
-import {useEffect} from 'react'
-import { useDispatch , useSelector } from 'react-redux'
-import { fetchBurgers } from '../Redux/reducers/menuSlice'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBurgers , setBurgerTypeFilter } from '../Redux/reducers/menuSlice';
 import BurgerCard from './BurgerCard';
 
 const OurMenu = () => {
-
   const dispatch = useDispatch();
-  const { burgers , status , error}= useSelector((state)=> state.menu)
+  const { burgers, status, error , burgerTypeFilter } = useSelector((state) => state.menu);
 
-  useEffect(() =>{
+  useEffect(() => {
     dispatch(fetchBurgers());
-  },[dispatch]);
+    dispatch(setBurgerTypeFilter('beef'));
+  }, [dispatch]);
 
-  if(status === 'loading'){
-    return <div>Loading...</div>
+  const handleFilter = (type) => {
+      dispatch(setBurgerTypeFilter(type));
+  };
+
+  const filteredBurgers = burgerTypeFilter
+    ? burgers.filter((burger) => burger.type === burgerTypeFilter)
+    : burgers;
+
+  if (status === 'loading' || burgers.length === 0) {
+    return <div>Loading...</div>;
   }
 
-  if (status === 'failed'){
-    return <div>Error: {error}</div>  
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
   }
 
   return (
-    <div className='bg-[#e7e7e5] mt-[-5rem]'>
-      <h1 className='section-header p-[5rem]'>Our Menu</h1>
-        {burgers.map((burger) => (
-          <BurgerCard burger={burger} key={burger.name} />
-        ))}
-    </div>
-  )
-}
+    <div className='bg-[#e7e7e5] mt-[-5rem] pb-[2rem]'>
+      <h1 className='section-header pt-[5rem] pb-[2rem]'>Our Menu</h1>
+      <div className=' grid grid-cols-6 max-sm:grid-cols-2 max-lg:grid-cols-3 gap-2 max-lg:gap-3 px-[5rem] mb-[3rem]'>
+      <button
+          className={` ${burgerTypeFilter === 'beef' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          onClick={() => handleFilter('beef')}
+        >
+          Beef
+      </button>
 
-export default OurMenu
+      <button
+          className={` ${burgerTypeFilter === 'chicken' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          onClick={() => handleFilter('chicken')}
+        >
+          Chicken
+      </button>
+
+      <button
+          className={` ${burgerTypeFilter === 'Snacks' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          onClick={() => handleFilter('Snacks')}
+        >
+          Snacks
+      </button>
+
+      <button
+          className={` ${burgerTypeFilter === 'fish' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          onClick={() => handleFilter('fish')}
+        >
+          Fish
+      </button>
+
+      <button
+          className={` ${burgerTypeFilter === 'desserts' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          onClick={() => handleFilter('desserts')}
+        >
+          Desserts
+      </button>
+
+      <button
+          className={` ${burgerTypeFilter === 'drinks' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          onClick={() => handleFilter('drinks')}
+        >
+          Drinks
+      </button>
+      </div>
+
+      <div className='flex justify-center items-center'>
+      <div className='grid grid-cols-2 max-lg:grid-cols-1 gap-2'>
+      {filteredBurgers.map((burger) => (
+        <BurgerCard
+          burger={burger} 
+          key={burger.id}
+        />
+      ))}
+      </div>
+      </div>
+    </div>
+  );
+};
+
+export default OurMenu;
+
 

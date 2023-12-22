@@ -69,7 +69,6 @@ const Navbar = ({onMenuToggle}) => {
             <li className='nav-link'>Home</li>
             <li className='nav-link'>Special Offer</li>
             <li className='nav-link'>Burgers</li>
-            <li className='nav-link'>Feedback</li>
             <li className='nav-link'>Outlet Location</li>
           </ul>
         </div>
