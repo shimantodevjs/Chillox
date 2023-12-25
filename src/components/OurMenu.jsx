@@ -31,44 +31,44 @@ const OurMenu = () => {
   return (
     <div className='bg-[#e7e7e5] mt-[-5rem] pb-[2rem]'>
       <h1 className='section-header pt-[5rem] pb-[2rem]'>Our Menu</h1>
-      <div className=' grid grid-cols-6 max-sm:grid-cols-2 max-lg:grid-cols-3 gap-2 max-lg:gap-3 px-[5rem] mb-[3rem]'>
+      <div className=' grid grid-cols-6 max-sm:grid-cols-2 max-lg:grid-cols-3 gap-2 max-lg:gap-3 px-[5rem] max-sm:px-[2rem] mb-[3rem]'>
       <button
-          className={` ${burgerTypeFilter === 'beef' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          className={` ${burgerTypeFilter === 'beef' ? 'bg-white text-brand outline-brand rounded' : 'bg-brand text-white'}`}
           onClick={() => handleFilter('beef')}
         >
           Beef
       </button>
 
       <button
-          className={` ${burgerTypeFilter === 'chicken' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          className={` ${burgerTypeFilter === 'chicken' ? 'bg-white text-brand outline-brand rounded' : 'bg-brand text-white'}`}
           onClick={() => handleFilter('chicken')}
         >
           Chicken
       </button>
 
       <button
-          className={` ${burgerTypeFilter === 'Snacks' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          className={` ${burgerTypeFilter === 'Snacks' ? 'bg-white text-brand outline-brand rounded' : 'bg-brand text-white'}`}
           onClick={() => handleFilter('Snacks')}
         >
           Snacks
       </button>
 
       <button
-          className={` ${burgerTypeFilter === 'fish' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          className={` ${burgerTypeFilter === 'fish' ? 'bg-white text-brand outline-brand rounded' : 'bg-brand text-white'}`}
           onClick={() => handleFilter('fish')}
         >
           Fish
       </button>
 
       <button
-          className={` ${burgerTypeFilter === 'desserts' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          className={` ${burgerTypeFilter === 'desserts' ? 'bg-white text-brand outline-brand rounded' : 'bg-brand text-white'}`}
           onClick={() => handleFilter('desserts')}
         >
           Desserts
       </button>
 
       <button
-          className={` ${burgerTypeFilter === 'drinks' ? 'bg-white text-brand outline-brand' : 'bg-brand text-white'}`}
+          className={` ${burgerTypeFilter === 'drinks' ? 'bg-white text-brand outline-brand rounded' : 'bg-brand text-white'}`}
           onClick={() => handleFilter('drinks')}
         >
           Drinks
@@ -76,7 +76,7 @@ const OurMenu = () => {
       </div>
 
       <div className='flex justify-center items-center'>
-      <div className='grid grid-cols-2 max-lg:grid-cols-1 gap-2'>
+      <div className='grid grid-cols-2 max-lg:grid-cols-4 max-sm:grid-cols-2 gap-2'>
       {filteredBurgers.map((burger) => (
         <BurgerCard
           burger={burger} 

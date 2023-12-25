@@ -68,7 +68,8 @@ const Navbar = ({onMenuToggle}) => {
                            max-lg:flex-col max-lg:absolute max-lg:top-[80px] max-lg:left-0 max-lg:w-full'>
             <li className='nav-link'>Home</li>
             <li className='nav-link'>Special Offer</li>
-            <li className='nav-link'>Burgers</li>
+            <li className='nav-link'>Menu</li>
+            <li className='nav-link'>Feedbacks</li>
             <li className='nav-link'>Outlet Location</li>
           </ul>
         </div>

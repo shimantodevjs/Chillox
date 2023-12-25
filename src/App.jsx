@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar"; 
-import SpecialOffer from "./components/specialOffer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import SpecialOffer from "./components/SpecialOffer";
 import OurMenu from "./components/OurMenu";
  
 const App=()=> {
@@ -10,14 +11,17 @@ const App=()=> {
 
   const handleMenuToggle= (isOpen)=>{
     setMenuOpen(isOpen)
-    setHeroOffset(isOpen ? 200: 0)
+    setHeroOffset(isOpen ? 250: 0)
   }
+
+
   return (
     <>
       <Navbar onMenuToggle={handleMenuToggle} />
       <Hero offset={heroOffset} />
       <SpecialOffer />
       <OurMenu />
+      <Footer />
     </>
   )
 }

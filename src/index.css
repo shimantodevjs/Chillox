@@ -38,15 +38,19 @@
     }
   
     .news-img {
-      @apply cursor-pointer transition-all duration-150 hover:scale-105;
+      @apply cursor-pointer transition-all duration-150 ;
     }
   
     .specialOffer-img {
-      @apply h-[450px] w-[400px] max-lg:h-[350px] sm:opacity-90 hover:opacity-100 slide-img hover:ml-0
+      @apply h-[400px] w-[400px] max-lg:h-[350px] max-lg:w-[280px] sm:opacity-90 hover:opacity-100 slide-img hover:ml-0
     }
   
     .specialOffer-container {
       @apply flex flex-col justify-start gap-2 custom-box cursor-pointer bg-white
+    }
+
+    .footer-icons{
+      @apply text-gray-300 text-3xl border border-gray-300 rounded-full p-3 hover:bg-gray-700
     }
 
 }

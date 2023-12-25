@@ -8,8 +8,8 @@
           <div className='w-[50%] max-lg:w-[100%]  border-r-[1px] border-gray-400 mt-5 mb-5 px-10 '>
             <div className='py-5'>
             <img src="/hero6.jpg" alt="" className='news-img' />
-            <div className='mt-5 '>
-            <a href="tel:+09678361361" className='underline'>Call Now: 09678361361</a>
+            <div className='flex justify-center '>
+            <a href="tel:+09678361361" className=' border-brand border border-t-0 p-2 bg-red-100 hover:bg-brand hover:text-white'>Call Now: 09678361361</a>
             </div>
             </div>
 
@@ -39,7 +39,7 @@
             <img src="/hero3.png" alt="" className='cursor-pointer max-sm:h-[100px] max-sm:w-[100px] ' />
             <div>
             <h1 className='text-brand mt-2'>I-MISS-U</h1>
-            <h1>Special desserts with loved ones</h1>
+            <h1>Share desserts with loved ones</h1>
             </div>
             </div>
 
