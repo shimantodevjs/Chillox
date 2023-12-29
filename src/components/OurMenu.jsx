@@ -20,16 +20,23 @@ const OurMenu = () => {
     ? burgers.filter((burger) => burger.type === burgerTypeFilter)
     : burgers;
 
-  if (status === 'loading' || burgers.length === 0) {
-    return <div>Loading...</div>;
+   if (status === 'loading') {
+    return (
+    <div className="flex justify-center items-center h-screen">
+      <img
+        src='./Infinity.gif' // Replace with the actual URL of your loading GIF
+        alt="Loading"
+      />
+    </div>
+  );
   }
-
+  
   if (status === 'failed') {
     return <div>Error: {error}</div>;
   }
 
   return (
-    <div className='bg-[#e7e7e5] mt-[-5rem] pb-[2rem]'>
+    <div className='bg-[#e7e7e5] mt-[-5rem] pb-[5rem]'>
       <h1 className='section-header pt-[5rem] pb-[2rem]'>Our Menu</h1>
       <div className=' grid grid-cols-6 max-sm:grid-cols-2 max-lg:grid-cols-3 gap-2 max-lg:gap-3 px-[5rem] max-sm:px-[2rem] mb-[3rem]'>
       <button

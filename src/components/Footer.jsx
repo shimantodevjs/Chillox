@@ -6,8 +6,8 @@ import { TiSocialLinkedin } from "react-icons/ti";
 const Footer = () => {
   return (
     <div className='bg-gray-900'>
-        <div className="py-[5rem] flex justify-between items-center flex-col h-[80vh] ">
-           <div className="flex justify-between items-center w-[30%]">
+        <div className="py-[5rem] flex justify-between items-center flex-col h-[80vh] max-lg:h-[40vh] max-sm:h-[60vh] ">
+           <div className="flex justify-between items-center w-[30%] max-lg:w-[60%]">
            <div className="footer-icons">
               <a href="https://www.facebook.com/chillox.burgers" target="_blank">
               <FaFacebookF />
@@ -32,12 +32,12 @@ const Footer = () => {
               </a>
            </div>
            </div>
-           <img src="./chillox.jpg" alt="Chillox" className=" h-[100px] w-[100px]"/>
-           <div className="flex flex-col justify-center items-center gap-2">
-              <div>
-                <span className="text-sm text-gray-200 px-5 border-r border-brand">Chillox restaurant</span>
-                <span className="text-sm text-gray-200 px-5 border-r border-brand" >Dhaka,Chattogram & Mymensingh</span>
-                <span className="text-sm text-gray-200 px-5 border-r border-brand">Telephone- +09678361361</span>
+           <img src="./chillox.jpg" alt="Chillox" className=" h-[100px] w-[100px] max-sm:h-[50px] max-sm:w-[50px]"/>
+           <div className="flex flex-col justify-center items-center gap-4">
+              <div className="max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:gap-2">
+                <span className="text-sm text-gray-200 px-5 border-r border-brand max-sm:border-none">Chillox restaurant</span>
+                <span className="text-sm text-gray-200 px-5 border-r border-brand max-sm:border-none" >Dhaka,Chattogram & Mymensingh</span>
+                <span className="text-sm text-gray-200 px-5 border-r border-brand max-sm:border-none">Telephone- +09678361361</span>
                 <span className="text-sm text-gray-200 px-5 ">chillox.burgers@gmail.com</span>
               </div>
               <div className="text-gray-500 text-sm">

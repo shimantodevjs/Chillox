@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
+.slick-prev:before,
+.slick-next:before {
+  color: #ea2723 !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +22,8 @@
   }
 
   .section-header{
-    @apply text-7xl max-lg:text-5xl text-center pt-[3rem] max-lg:mt-[2rem] mb-[5rem] max-lg:mb-[2rem] text-outline
+    @apply text-7xl max-lg:text-5xl text-center pt-[3rem] max-lg:mt-[2rem] mb-[5rem] max-lg:mb-[2rem] lg:text-outline-pc
+    max-lg:text-outline-tab
   }
 
 
@@ -50,8 +56,10 @@
     }
 
     .footer-icons{
-      @apply text-gray-300 text-3xl border border-gray-300 rounded-full p-3 hover:bg-gray-700
+      @apply text-gray-300 text-3xl border border-gray-300 rounded-full p-3 hover:bg-gray-700 max-sm:text-xl
     }
+
+    
 
 }
 
@@ -102,11 +110,17 @@
           }
         }
       
-        .text-outline {
+        .text-outline-pc {
           color: rgb(238, 235, 232);
           -webkit-text-stroke: 4px #ea2723;
           font-family: 'Luckiest Guy', cursive;
           animation: glow 3s infinite, suckInOut 3s infinite;
+        }
+
+        .text-outline-tab {
+          color: rgb(238, 235, 232);
+          -webkit-text-stroke: 4px #ea2723;
+          font-family: 'Luckiest Guy', cursive;
         }
       
         .box-shadow {

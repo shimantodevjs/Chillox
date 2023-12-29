@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SpecialOffer from "./components/SpecialOffer";
 import OurMenu from "./components/OurMenu";
+import Feedback from "./components/Feedback";
+import Location from "./components/Location";
  
 const App=()=> {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,6 +23,8 @@ const App=()=> {
       <Hero offset={heroOffset} />
       <SpecialOffer />
       <OurMenu />
+      <Feedback />
+      <Location />
       <Footer />
     </>
   )

@@ -10,14 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/luckiest-guy": "^5.0.18",
+    "@mui/material": "^5.15.2",
     "@reduxjs/toolkit": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.0",
-    "typeface-archivo-black": "^1.1.13"
+    "react-slick": "^0.29.0",
+    "redux": "^5.0.1",
+    "redux-persist": "^6.0.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
