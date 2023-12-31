@@ -23,7 +23,7 @@ const Hero = ({offset}) => {
     }
   }
   return (
-    <div className='bg-[#e7e7e5]' style={{marginTop:offset}}>
+    <div className='bg-[#F0EAD6]' style={{marginTop:offset}}>
       <div className='bg-brand text-white flex max-lg:flex-col justify-between items-center'>
             {/* right */}
             <div className='pt-[3rem] pb-[3rem] max-lg:pt-[2rem] max-sm:pb-[5rem] px-[2rem]'>

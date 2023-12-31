@@ -6,6 +6,7 @@ import SpecialOffer from "./components/SpecialOffer";
 import OurMenu from "./components/OurMenu";
 import Feedback from "./components/Feedback";
 import Location from "./components/Location";
+import ReturnToTop from "./components/ReturnToTop";
  
 const App=()=> {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const App=()=> {
 
 
   return (
-    <>
+    <div className="relative">
       <Navbar onMenuToggle={handleMenuToggle} />
       <Hero offset={heroOffset} />
       <SpecialOffer />
@@ -26,7 +27,8 @@ const App=()=> {
       <Feedback />
       <Location />
       <Footer />
-    </>
+      <ReturnToTop />
+    </div>
   )
 }
 

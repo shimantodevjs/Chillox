@@ -45,10 +45,10 @@ const Feedback = () => {
 
 
   return (
-    <div className='bg-[#e7e7e5] mt-[-5rem] pb-[5rem] '>
+    <div className='bg-[#F0EAD6] mt-[-5rem] pb-[5rem]' id='feedbacks'>
       <h1 className='section-header pt-[5rem]'>People's Voice</h1>
       <div className='flex justify-center items-start'>
-       <Slider {...settings} className='w-[50%] max-sm:w-[80%] '>
+       <Slider {...settings} className='w-[50%] max-lg:w-[80%] '>
         {userReviews.map((review, index) => (
           <div key={index} className='flex justify-center items-center'>
             <div className='bg-white flex flex-col justify-center items-center p-6 gap-4 h-[200px] max-lg:h-[300px]' >

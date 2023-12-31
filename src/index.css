@@ -36,7 +36,7 @@
 @layer components{
 
   .nav-link {
-      @apply rounded-lg cursor-pointer hover:bg-red-300 px-5 py-2;
+      @apply rounded-lg cursor-pointer hover:bg-red-300 px-5 py-2 ;
     }
   
     .news-card {

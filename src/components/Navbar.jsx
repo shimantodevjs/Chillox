@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-scroll';
+
 import Cart from './Cart';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BsFillCartFill } from 'react-icons/bs';
@@ -11,7 +13,9 @@ const Navbar = ({onMenuToggle}) => {
   const [isDeliveryActive, setDeliveryActive] = useState(true);
   const [isPickupActive, setPickupActive] = useState(false);
 
-  const dispatch = useDispatch();
+
+  const cartItems = useSelector(state => state.cart.items);
+  const totalCartQuantity = cartItems.reduce((total, item) => total + item.quantity, 0); 
 
   const toggleNavbar = () => {
     setMenuOpen(!menuOpen);
@@ -33,7 +37,7 @@ const Navbar = ({onMenuToggle}) => {
   };
 
   return (
-    <div className='mx-auto h-[80px] lg:h-[100px] max-w-full flex items-center justify-between p-4 relative'>
+    <div className='mx-auto h-[80px] lg:h-[100px] max-w-full flex items-center justify-between p-4 bg-white z-[999]' id='home'>
 
       {/* left */}
       <div className='flex items-center gap-4 max-sm:gap-2'>
@@ -64,21 +68,32 @@ const Navbar = ({onMenuToggle}) => {
       <div className='flex items-center gap-2 '>
 
         <div className={`${menuOpen ? 'max-lg:static' : 'max-lg:hidden'}`}>
-          <ul className='flex items-center justify-center gap-2
-                           max-lg:flex-col max-lg:absolute max-lg:top-[80px] max-lg:left-0 max-lg:w-full'>
-            <li className='nav-link'>Home</li>
-            <li className='nav-link'>Special Offer</li>
-            <li className='nav-link'>Menu</li>
-            <li className='nav-link'>Feedbacks</li>
-            <li className='nav-link'>Outlet Location</li>
-          </ul>
+          <div className='flex items-center justify-center gap-2
+                           max-lg:flex-col max-lg:absolute max-lg:top-[80px] max-lg:left-0 max-lg:w-full bg-white pb-2'>
+            <Link to='home' smooth={true} duration={500} className='nav-link'>Home</Link>
+
+            <Link to='special' smooth={true} duration={500} className='nav-link'>Special Offer</Link>
+
+            <Link to='menu' smooth={true} duration={500} className='nav-link'>Menu</Link>
+
+            <Link to='feedbacks' smooth={true} duration={500} className='nav-link'>Feedbacks</Link>
+
+            <Link to='location' smooth={true} duration={500} className='nav-link'>Outlet Location</Link>
+            <button className='flex justify-center items-center gap-2 
+                         hover:bg-red-500 relative max-lg:hidden' onClick={toggleCart}>
+
+          <BsFillCartFill /> Cart {cartItems.length > 0 && <span className='absolute top-[-15px] right-[-5px] bg-black p-1 rounded-full'>{totalCartQuantity}</span>}
+            </button>
+          </div>
+
         </div>
 
         <button className='flex justify-center items-center gap-2 
-                         hover:bg-red-500' onClick={toggleCart}>
+                         hover:bg-red-500 relative lg:hidden' onClick={toggleCart}>
 
-          <BsFillCartFill /> Cart
+          <BsFillCartFill /> Cart {cartItems.length > 0 && <span className='absolute top-[-15px] right-[-5px] bg-black p-1 rounded-full'>{totalCartQuantity}</span>}
         </button>
+
       </div>
 
       {cartOpen && <Cart toggleCart={toggleCart}/>}

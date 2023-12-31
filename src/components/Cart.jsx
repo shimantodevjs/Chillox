@@ -22,7 +22,7 @@ const Cart = ({ toggleCart }) => {
   };
 
   return (
-    <div className="fixed top-0 right-0 bg-white  z-10 overflow-auto h-[100vh] w-[30%] border-b-2 p-[30px] shadow-md">
+    <div className="fixed top-0 right-0 bg-white  z-50 overflow-auto h-[100vh] w-[30%] max-lg:w-[40%] max-sm:w-[100%] border-b-2 p-[30px] shadow-md">
 
       <div className="flex justify-between">
       <h1 className="text-4xl mb-5">Cart</h1>

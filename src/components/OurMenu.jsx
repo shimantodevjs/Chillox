@@ -36,7 +36,7 @@ const OurMenu = () => {
   }
 
   return (
-    <div className='bg-[#e7e7e5] mt-[-5rem] pb-[5rem]'>
+    <div className='bg-[#F0EAD6] mt-[-5rem] pb-[5rem]' id='menu'>
       <h1 className='section-header pt-[5rem] pb-[2rem]'>Our Menu</h1>
       <div className=' grid grid-cols-6 max-sm:grid-cols-2 max-lg:grid-cols-3 gap-2 max-lg:gap-3 px-[5rem] max-sm:px-[2rem] mb-[3rem]'>
       <button
