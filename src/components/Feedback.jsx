@@ -20,7 +20,7 @@ const Feedback = () => {
     return (
     <div className="flex justify-center items-center h-screen">
       <img
-        src='./Infinity.gif'
+        src='./Infinity.gif'   
         alt="Loading"
       />
     </div>
@@ -28,7 +28,7 @@ const Feedback = () => {
   }
 
   if (status === 'failed') {
-    return <div>Error: {error}</div>;
+    return <div> <strong>Error: </strong>{error}</div>;
   }
 
   const settings = {
