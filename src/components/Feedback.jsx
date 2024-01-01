@@ -20,7 +20,7 @@ const Feedback = () => {
     return (
     <div className="flex justify-center items-center h-screen">
       <img
-        src='./Infinity.gif' // Replace with the actual URL of your loading GIF
+        src='./Infinity.gif'
         alt="Loading"
       />
     </div>
