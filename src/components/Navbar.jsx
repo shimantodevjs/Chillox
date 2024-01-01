@@ -9,13 +9,16 @@ import { IoIosCloseCircleOutline } from 'react-icons/io';
 
 const Navbar = ({onMenuToggle}) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [cartOpen , setCartOpen] = useState(false)
+  const [cartOpen , setCartOpen] = useState(false);
   const [isDeliveryActive, setDeliveryActive] = useState(true);
   const [isPickupActive, setPickupActive] = useState(false);
 
 
   const cartItems = useSelector(state => state.cart.items);
-  const totalCartQuantity = cartItems.reduce((total, item) => total + item.quantity, 0); 
+
+  const totalCartQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+  
 
   const toggleNavbar = () => {
     setMenuOpen(!menuOpen);

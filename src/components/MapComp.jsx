@@ -15,33 +15,47 @@ const MapComp = () => {
 
   const [currentLocation, setCurrentLocation] = useState(locations[0]);
 
+
+
   useEffect(() => {
-    let map;
+  let map;
 
-    if (!map) {
-      // Create a new map if it doesn't exist
-      map = L.map('map').setView([currentLocation.latitude, currentLocation.longitude], 13);
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-      }).addTo(map);
 
-      L.marker([currentLocation.latitude, currentLocation.longitude]).addTo(map);
-    } else {
-      // Update the existing map's view and marker position
-      map.setView([currentLocation.latitude, currentLocation.longitude], 13);
-      map.eachLayer((layer) => {
-        if (layer instanceof L.Marker) {
-          layer.setLatLng([currentLocation.latitude, currentLocation.longitude]);
-        }
-      });
-    }
+  if (!map) {
+    // Create a new map if it doesn't exist
+    map = L.map('map').setView([currentLocation.latitude, currentLocation.longitude], 13);
 
-    // Clean up existing map instance before component unmounts or before creating a new map
-    return () => {
-      map && map.remove();
-    };
-  }, [currentLocation]);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© shimantodevjs',
+    }).addTo(map);
+
+    // Create a custom icon for the marker
+    const customIcon = L.icon({
+      iconUrl: 'public/location.png',
+      iconSize: [40, 40],
+      iconAnchor: [16, 32], 
+      popupAnchor: [0, -32], 
+    });
+
+    // Add the marker with the custom icon
+    L.marker([currentLocation.latitude, currentLocation.longitude], { icon: customIcon }).addTo(map);
+  } else {
+    // Update the existing map's view and marker position
+    map.setView([currentLocation.latitude, currentLocation.longitude], 13);
+    map.eachLayer((layer) => {
+      if (layer instanceof L.Marker) {
+        layer.setLatLng([currentLocation.latitude, currentLocation.longitude]);
+      }
+    });
+  }
+
+  // Clean up existing map instance before component unmounts or before creating a new map
+  return () => {
+    map && map.remove();
+  };
+}, [currentLocation]);
+
 
   const handleLocationChange = (location) => {
     setCurrentLocation(location);

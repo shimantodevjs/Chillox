@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect , useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBurgers , setBurgerTypeFilter } from '../Redux/reducers/menuSlice';
 import BurgerCard from './BurgerCard';
 
 const OurMenu = () => {
+  const [cartOpen , setCartOpen] = useState(false)
   const dispatch = useDispatch();
   const { burgers, status, error , burgerTypeFilter } = useSelector((state) => state.menu);
 
@@ -15,6 +16,10 @@ const OurMenu = () => {
   const handleFilter = (type) => {
       dispatch(setBurgerTypeFilter(type));
   };
+
+  const toggleCart = () =>{
+    setCartOpen(!cartOpen)
+  }
 
   const filteredBurgers = burgerTypeFilter
     ? burgers.filter((burger) => burger.type === burgerTypeFilter)
@@ -81,6 +86,8 @@ const OurMenu = () => {
           Drinks
       </button>
       </div>
+      
+      
 
       <div className='flex justify-center items-center'>
       <div className='grid grid-cols-2 max-lg:grid-cols-4 max-sm:grid-cols-2 gap-2'>
@@ -92,6 +99,11 @@ const OurMenu = () => {
       ))}
       </div>
       </div>
+      <button className='flex justify-center items-center gap-2 
+                         hover:bg-red-500 relative lg:hidden' onClick={toggleCart}>
+
+          Open Cart!
+      </button>
     </div>
   );
 };

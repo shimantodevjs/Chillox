@@ -6,7 +6,7 @@ import { TiSocialLinkedin } from "react-icons/ti";
 const Footer = () => {
   return (
     <div className='bg-gray-900'>
-        <div className="py-[5rem] flex justify-between items-center flex-col h-[80vh] max-lg:h-[40vh] max-sm:h-[60vh] ">
+        <div className="py-[5rem] flex justify-evenly items-center flex-col h-[80vh]">
            <div className="flex justify-between items-center w-[30%] max-lg:w-[60%]">
            <div className="footer-icons">
               <a href="https://www.facebook.com/chillox.burgers" target="_blank">

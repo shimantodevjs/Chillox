@@ -7,6 +7,24 @@
   color: #ea2723 !important;
 }
 
+@keyframes cartAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tick-animation {
+  animation: cartAnimation 0.5s ease;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -58,8 +76,6 @@
     .footer-icons{
       @apply text-gray-300 text-3xl border border-gray-300 rounded-full p-3 hover:bg-gray-700 max-sm:text-xl
     }
-
-    
 
 }
 
