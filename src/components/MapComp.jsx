@@ -32,7 +32,7 @@ const MapComp = () => {
 
     // Create a custom icon for the marker
     const customIcon = L.icon({
-      iconUrl: 'public/location.png',
+      iconUrl: '/location.png',
       iconSize: [40, 40],
       iconAnchor: [16, 32], 
       popupAnchor: [0, -32], 
