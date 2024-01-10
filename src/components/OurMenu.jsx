@@ -99,11 +99,6 @@ const OurMenu = () => {
       ))}
       </div>
       </div>
-      <button className='flex justify-center items-center gap-2 
-                         hover:bg-red-500 relative lg:hidden' onClick={toggleCart}>
-
-          Open Cart!
-      </button>
     </div>
   );
 };

@@ -19,7 +19,6 @@ const Navbar = ({onMenuToggle}) => {
   const totalCartQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   
-
   const toggleNavbar = () => {
     setMenuOpen(!menuOpen);
     onMenuToggle(!menuOpen)
