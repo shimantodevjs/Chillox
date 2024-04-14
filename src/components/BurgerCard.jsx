@@ -36,8 +36,7 @@ const BurgerCard = ({burger}) => {
       >
         {showTick ? (
           <>
-            <span className='max-lg:hidden'>Added!</span>
-            <TiTick className='text-xl' />
+            <span className='max-lg:hidden'>Added</span><TiTick className='text-xl' />
           </>
         ) : (
           <>
