@@ -56,7 +56,7 @@ const Navbar = ({onMenuToggle}) => {
             </div>
 
             {/* right */}
-            <div className='flex items-center justify-center gap-2 '>
+        <div className='flex items-center justify-center gap-2 '>
 
             <div className={`${menuOpen ? '' : 'max-lg:hidden'}`}>
                 <div className={'flex items-center justify-center gap-2 max-lg:flex-col max-lg:absolute max-lg:top-[80px] max-lg:left-0 max-lg:w-full bg-white pb-2'}>
@@ -69,7 +69,7 @@ const Navbar = ({onMenuToggle}) => {
             </div>
 
 
-                <button className='flex justify-center items-center gap-2 hover:bg-red-500 lg:mt-[-6px] ' onClick={toggleCart}>
+                <button className='flex justify-center items-center gap-2 hover:bg-red-500 lg:mt-[-6px] relative' onClick={toggleCart}>
                     <BsFillCartFill /> Cart {cartItems.length > 0 && <span className='absolute top-[-15px] right-[-5px] bg-black p-1 rounded-full'>{totalCartQuantity}</span>}
                 </button>
             </div>

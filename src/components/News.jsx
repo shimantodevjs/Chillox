@@ -1,6 +1,9 @@
-    import React from 'react'
+import React from 'react'
     
-    const News = () => {
+const News = () => {
+
+   
+  
       return (
         <div className='flex max-lg:flex-col gap-7 max-lg:gap-0'>
          {/* left */}
